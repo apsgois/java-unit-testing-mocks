@@ -1,38 +1,77 @@
-# C214---TESTE
-Exercico para praticar sobre teste: 
+# Java Unit Testing with Mocks
 
-Alunos: Ana Paula Serafim de Góis, Pedro Henrique Ribeiro
+Academic project developed during my **Software Engineering** studies, focused on practicing automated testing in Java.
 
-Questão 1)
-Teste uma classe responsável por popular uma página WEB com informações referentes ao horário de atendimento dos professores do Inatel. O horário de
-atendimento é retornado por um servidor remoto em um JSON em formato String.
-Não é necessário demonstrar o funcionamento da página WEB, somente o teste.
+The project validates professor office-hour information returned by a simulated remote server in JSON format, using unit tests and mock objects to cover both successful and failure scenarios.
 
+## 📚 Project Overview
 
-Observações:
-• Crie pelo menos 10 testes para cenários de sucesso e 10 para falha.
-• Caso a sala seja (1-5) o prédio escolhido no array "predio"deve ser 1. Caso seja
-(6 - 10) o prédio é o 2 e assim por diante.
-• Utilize a linguagem da sua escolha para realizar os testes.
-• Caso seja necessário, os objetos mock podem ser criados manualmente ou utilizando alguma biblioteca.
-• O último código feito em aula pode ser encontrado em: https://github.com/
-chrislima-inatel/C214/tree/main/aula-07-mock
-• O uso correto de versionamento e gerência de dependências será avaliado. Levar
-em consideração o gitignore.
-1
-• Considere que o JSON retornado pelo servidor remoto possui, no mínimo, a
-seguinte estrutura:
+The application receives professor information in JSON format and validates data such as:
 
-{
-  "nomeDoProfessor": "<nome_do_professor",
-  "horarioDeAtendimento": "<horario_de_atendimento>",
-  "periodo": "<integral_ou_noturno>",
-  "sala": "<sala_de_atendimento>",
-  "predio": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "6"
-  ]
-}
+* Professor name
+* Office hours
+* Academic period
+* Room number
+* Building assignment
+
+The building is determined according to the professor's room number, allowing the application to validate whether the returned data is consistent.
+
+## 🧪 Testing
+
+The main objective of the project was to create automated tests covering different application scenarios.
+
+The test suite includes:
+
+* Successful scenarios
+* Failure scenarios
+* JSON response validation
+* Room and building validation
+* Mocked remote server responses
+* Edge-case testing
+
+The academic exercise required at least:
+
+* 10 successful test scenarios
+* 10 failure test scenarios
+
+## 🛠️ Technologies
+
+* Java
+* Maven
+* JSON
+* Unit Testing
+* Mock Objects
+
+## 📂 Project Structure
+
+```text
+.
+├── src/
+├── pom.xml
+└── README.md
+```
+
+## 💡 Concepts Explored
+
+This project provided practical experience with:
+
+* Automated software testing
+* Unit testing
+* Mock objects
+* Test scenario design
+* Dependency management with Maven
+* JSON data validation
+* Software quality practices
+
+## 👥 Contributors
+
+This project was developed collaboratively by:
+
+* Ana Paula Serafim de Góis
+* Pedro Henrique Ribeiro
+
+## 🎓 Academic Context
+
+This project was developed as an evaluated exercise during my Software Engineering studies.
+
+It is maintained as part of my academic portfolio to document my experience with software testing, automated validation, and Java development.
